@@ -101,14 +101,14 @@ def saveToFile(nameFile, df_DES_valides, DES_propab):
             writer.writerow([i[0], i[1], i[6], i[2], i[3]])
 
 if __name__ == '__main__':
-    knn_flash =  joblib.load('knn.pkl')
-    scaler = joblib.load('scaler.pkl')
-    model_iforest = joblib.load('isolation_forest_des.pkl')
-    DES_propab = pd.read_csv('./DES_probab.csv')
+    knn_flash =  joblib.load('./saveModel/knn.pkl')
+    scaler = joblib.load('./saveModel/scaler.pkl')
+    model_iforest = joblib.load('./saveModel/isolation_forest_des.pkl')
+    DES_propab = pd.read_csv('./results/DES_probab.csv')
 
     limitEcartType = 5
     limitMoyenne = 15
-    nameFile = './DES_more_probab.csv'
+    nameFile = './results/DES_more_probab.csv'
 
     lignes_validees = []
 

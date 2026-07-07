@@ -139,8 +139,8 @@ def determiner_type_des(smi_hba, smi_hbd):
 
 
 if __name__ == '__main__':
-    scaler = joblib.load('scaler.pkl')
-    model_iforest = joblib.load('isolation_forest_des.pkl')
+    scaler = joblib.load('./saveModel/scaler.pkl')
+    model_iforest = joblib.load('./saveModel/isolation_forest_des.pkl')
 
     smiles_list_HBA = extract_data_to_csv("./HB_DATA/13321_2019_381_MOESM2_ESM.sdf", "./HB_DATA/HBA.csv")
     smiles_list_HBD = extract_data_to_csv("./HB_DATA/13321_2019_381_MOESM3_ESM.sdf", "./HB_DATA/HBD.csv")
@@ -150,7 +150,7 @@ if __name__ == '__main__':
     total = ratioA + ratioB
     nbNoDES = 0
 
-    nameFile = './DES_probab.csv'
+    nameFile = './results/DES_probab.csv'
 
     """
     Nettoie le fichier
