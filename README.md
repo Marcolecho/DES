@@ -58,9 +58,18 @@ conda install -c conda-forge requests
 conda install -c conda-forge pubchempy
 conda install -c conda-forge scikit-learn
 cd DES
-nohup python3 des_calc.py > output.log 2>&1 &
 
-quand des_calc.py est terminé :
+```
+
+## Pour lancer le projet
+
+**Pour Lancer IsolationForest (prend 1-2 semaines)** 
+```nohup python3 des_calc.py > output.log 2>&1 &```
+
+Pour savoir si le programme à terminé de tourner, faire un cat "DES_probab.csv | wc -l", on doit arriver à 2 miliions de lignes.  
+
+**quand des_calc.py est terminé, lancer knn :**
+```
 python.exe knn_calc.py
 ```
 
