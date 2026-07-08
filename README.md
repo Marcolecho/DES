@@ -68,10 +68,12 @@ cd DES
 
 Pour savoir si le programme à terminé de tourner, faire un cat "DES_probab.csv | wc -l", on doit arriver à 2 miliions de lignes.  
 
-**quand des_calc.py est terminé, lancer knn :**
+**quand des_calc.py est terminé, lancer knn (1 jour):**
 ```
 python.exe knn_calc.py
 ```
+
+Le fichier final est dans "results/DES_more_probab.csv"
 
 ## Lien Schéma
 https://canva.link/mgsgivenggzj2vd
