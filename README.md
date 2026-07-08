@@ -63,7 +63,7 @@ cd DES
 
 ## Pour lancer le projet
 
-**Pour Lancer IsolationForest (prend 1-2 semaines)** 
+**Pour Lancer IsolationForest (prend 1-2 semaines)**   
 ```nohup python3 des_calc.py > output.log 2>&1 &```
 
 Pour savoir si le programme à terminé de tourner, faire un cat "DES_probab.csv | wc -l", on doit arriver à 2 miliions de lignes.  
