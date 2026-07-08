@@ -1,6 +1,9 @@
 # DES
 Générateur de DES à partir d'un base de données de DES et des modèles IsolationForest et KNN
 
+## Prérequis
+Google chrome
+
 ## Architecture
 
 On retrouve à la racine 3 fichiers python : 
@@ -34,7 +37,7 @@ les dossiers **DES_DATA** et **HB_DATA** stockent les différentes données réc
 
 <br><br>
 
-# Sources des données de base
+## Sources des données de base
 
 - https://link.springer.com/article/10.1186/s13321-019-0381-4#Sec2
 
@@ -47,3 +50,22 @@ les dossiers **DES_DATA** et **HB_DATA** stockent les différentes données réc
         * Density
         * Melting_temperature
         * Viscosity
+     
+## Installation 
+```
+iconv -f UTF-16 -t UTF-8 environment.yml -o environment_clean.yml
+conda env create -f environment_clean.yml -n desgen
+conda activate desgen
+conda install -c conda-forge rdkit
+conda install -c conda-forge requests
+conda install -c conda-forge pubchempy
+conda install -c conda-forge scikit-learn
+cd DES
+nohup python3 des_calc.py > output.log 2>&1 &
+
+quand des_calc.py est terminé :
+python.exe knn_calc.py
+```
+
+## Lien Schéma
+https://canva.link/mgsgivenggzj2vd
