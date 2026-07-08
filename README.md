@@ -1,9 +1,6 @@
 # DES
 Générateur de DES à partir d'un base de données de DES et des modèles IsolationForest et KNN
 
-## Prérequis
-Google chrome
-
 ## Architecture
 
 On retrouve à la racine 3 fichiers python : 
